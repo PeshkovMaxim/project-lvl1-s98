@@ -1,6 +1,6 @@
 {
   "name": "baranin-games",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,11 +16,13 @@
   },
   "author": "MaximPeshkov",
   "license": "ISC",
+  "dependencies": {
+    "readline-sync": "*"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "*",
     "babel-preset-env": "*",
-    "babel-preset-stage-0": "*",
-    "readline-sync": "*"
+    "babel-preset-stage-0": "*"
   }
 }
