@@ -20,6 +20,7 @@
     "babel-cli": "^6.24.1",
     "babel-core": "*",
     "babel-preset-env": "*",
-    "babel-preset-stage-0": "*"
+    "babel-preset-stage-0": "*",
+    "readline-sync": "*"
   }
 }
