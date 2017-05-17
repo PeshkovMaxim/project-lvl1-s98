@@ -1,3 +1,5 @@
-656a6d4d3eb9cf7eae76e5f6d8231f677203e1751c62407dd5cfa8c4472ba12e
+<a href="https://codeclimate.com/github/PeshkovMaxim/project-lvl1-s98"><img src="https://codeclimate.com/github/PeshkovMaxim/project-lvl1-s98/badges/gpa.svg" /></a>
 
-40cd0672d1e0e92930cb8acce0dd50f374f97537
+<a href="https://codeclimate.com/github/PeshkovMaxim/project-lvl1-s98/coverage"><img src="https://codeclimate.com/github/PeshkovMaxim/project-lvl1-s98/badges/coverage.svg" /></a>
+
+<a href="https://codeclimate.com/github/PeshkovMaxim/project-lvl1-s98"><img src="https://codeclimate.com/github/PeshkovMaxim/project-lvl1-s98/badges/issue_count.svg" /></a>
