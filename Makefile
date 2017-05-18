@@ -8,6 +8,9 @@ publish:
 	npm publish
 
 lint:
-	npm run eslint
+	npm run eslint -- src
+
+starteven:
+	npm run babel-node -- src/bin/brain-even.js
 
 .PHONY: test
