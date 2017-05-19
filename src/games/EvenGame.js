@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-export const getRandom = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+export const getNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-export const startEvenGame = (a, b) => {
+export const startEvenGame = () => {
   console.log(`Welcome to the Brain Games!
 Answer "yes" if number even otherwise answer "no".\n`);
 
@@ -12,7 +12,7 @@ Answer "yes" if number even otherwise answer "no".\n`);
     if (acc === 3) {
       return console.log(`Congratulations, ${userName}!`);
     }
-    const numQn = getRandom(a, b);
+    const numQn = getNumber(2, 200);
     console.log(`\nQuestion:${numQn}`);
     const getAnswer = readlineSync.question('Your answer: ');
     console.log(getAnswer);

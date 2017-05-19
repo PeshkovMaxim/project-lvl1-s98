@@ -1,4 +1,4 @@
 #!/usr/bin/env nodejs
-import { startEvenGame } from '../games/brainEvenFunc';
+import { startEvenGame } from '../games/EvenGame';
 
-startEvenGame(2, 100);
+startEvenGame();
