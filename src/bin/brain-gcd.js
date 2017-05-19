@@ -1,0 +1,4 @@
+#!/usr/bin/env nodejs
+import startGcdGame from '../games/gcdGame';
+
+startGcdGame();

@@ -4,6 +4,9 @@ install:
 start:
 	npm run babel-node -- src/bin/baranin-games.js
 
+startgcd:
+	npm run babel-node -- src/bin/brain-gcd.js
+
 publish:
 	npm publish
 
