@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import getNumber from '../functions/getNumber';
+import { getNumber } from '../functions/mathFunctions';
 import startAnyGame from '../functions/main';
 
 const startEvenGames = () => {
