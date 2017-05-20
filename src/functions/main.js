@@ -1,21 +1,22 @@
 import readlineSync from 'readline-sync';
 
-const startAnyGame = (functions, message) => {
+const startAnyGame = (message, question, answer, acc) => {
   console.log('Welcome to the Brain Games!');
   console.log(message);
-  const userName = readlineSync.question('May I have user name?: ');
-  console.log(`Hi, ${userName}!`);
-
-  const startGame = (func, acc) => {
-    if (acc === 3) {
-      return console.log(`Congratulations, ${userName}!`);
-    }
-
-    if (func() === false) {
-      return console.log('end game');
-    }
-    return startGame(func, acc + 1);
-  };
-  startGame(functions, 0);
+  const name = readlineSync.question('May I have user name?: ');
+  console.log(`Hi, ${name}!`);
+  if (acc === 3) {
+    return console.log(`Congratulations, ${name}!`);
+  }
+  console.log(`\nQuestion: ${question}`);
+  const getAnswer = readlineSync.question('Your answer: ');
+  if (getAnswer === `${answer}`) {
+    console.log('Correct!');
+  }
+  if (getAnswer !== `${answer}`) {
+    console.log(`'${getAnswer}' is wrong answer ;(. Try later.`);
+    return false;
+  }
+  return true;
 };
 export default startAnyGame;

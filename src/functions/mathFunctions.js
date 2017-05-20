@@ -6,4 +6,4 @@ export const gcd = (a, b) => {
   }
   return gcd(b, a % b);
 };
-export default { getNumber, gcd };
+export default getNumber;
