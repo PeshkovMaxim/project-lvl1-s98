@@ -11,6 +11,7 @@ const startAnyGame = (message, generator) => {
     const game = generator();
     const question = car(game);
     const answer = cdr(game);
+    //console.log(answer);
     if (acc === 3) {
       return console.log(`Congratulations, ${name}!`);
     }
@@ -20,8 +21,10 @@ const startAnyGame = (message, generator) => {
       console.log('Correct!');
     }
     if (getAnswer !== `${answer}`) {
-      console.log(`'${getAnswer}' is wrong answer ;(. Try later.`);
-      return false;
+      return console.log(`'${getAnswer}' is wrong answer ;(. Try later.`);
+    }
+    if (getAnswer !== `${answer}` && getAnswer !== 'no') {
+      return console.log(`'${getAnswer}' is wrong answer ;(. Correct answer was 'yes' or 'no'.`);
     }
     return startGame(generator, acc + 1);
   };

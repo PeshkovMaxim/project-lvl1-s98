@@ -8,7 +8,7 @@ const startGcdGame = () => {
     const num1 = getNumber(2, 50);
     const num2 = getNumber(1, 30);
     return cons(`${num1} ${num2}`, gcd(num1, num2));
-};
+  };
   startAnyGame(startWelcome, generator);
 };
 export default startGcdGame;

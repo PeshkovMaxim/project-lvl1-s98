@@ -1,44 +1,36 @@
-import readlineSync from 'readline-sync';
+import { cons } from 'hexlet-pairs';
 import { getNumber } from '../functions/mathFunctions';
 import startAnyGame from '../functions/main';
 
 
 const startCalcGame = () => {
-  const logic = () => {
+  const startWelcome = 'Answer "yes" if number even otherwise answer "no".\n';
+  const generator = () => {
     const constOperation = '+-*';
     const numQn = getNumber(1, 3);
     const num1 = getNumber(2, 50);
     const num2 = getNumber(3, 100);
     const operator = constOperation[numQn];
-    let sum = 0;
-    let printSum = '';
+    let answer = 0;
+    let question = '';
     switch (operator) {
       case '+':
-        sum = num1 + num2;
-        printSum = `${num1} + ${num2}`;
-        break;
+        answer = num1 + num2;
+        question = `${num1} + ${num2}`;
+        return cons(question, answer);
       case '-':
-        sum = num1 - num2;
-        printSum = `${num1} - ${num2}`;
-        break;
+        answer = num1 - num2;
+        question = `${num1} - ${num2}`;
+        return cons(question, answer);
       case '*':
-        sum = num1 * num2;
-        printSum = `${num1} * ${num2}`;
-        break;
+        answer = num1 * num2;
+        question = `${num1} * ${num2}`;
+        return cons(question, answer);
       default:
         break;
     }
-    console.log(`\nQuestion: ${printSum}`);
-    const getAnswer = readlineSync.question('Your answer: ');
-    if (getAnswer === `${sum}`) {
-      console.log('Correct!');
-    }
-    if (getAnswer !== `${sum}`) {
-      console.log(`'${getAnswer}' is wrong answer ;(. Try later.`);
-      return false;
-    } return null;
+    return null;
   };
-  const startWelcome = 'Answer "yes" if number even otherwise answer "no".\n';
-  startAnyGame(logic, startWelcome);
+  startAnyGame(startWelcome, generator);
 };
 export default startCalcGame;
