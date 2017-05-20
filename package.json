@@ -23,6 +23,7 @@
   "author": "MaximPeshkov",
   "license": "ISC",
   "dependencies": {
+    "hexlet-pairs": "^0.1.4",
     "readline-sync": "*"
   },
   "devDependencies": {
