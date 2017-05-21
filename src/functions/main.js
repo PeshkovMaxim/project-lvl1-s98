@@ -11,7 +11,6 @@ const startAnyGame = (message, generator) => {
     const game = generator();
     const question = car(game);
     const answer = cdr(game);
-    console.log(question)
     if (acc === 3) {
       return console.log(`Congratulations, ${name}!`);
     }

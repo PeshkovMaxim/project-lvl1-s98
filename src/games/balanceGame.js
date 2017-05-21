@@ -5,9 +5,9 @@ import startAnyGame from '../functions/main';
 const startBalanceGame = () => {
   const startWelcome = 'Balance the given number.\n';
   const generator = () => {
-    const numQn = getNumber(20, 300);
+    const numQn = getNumber(100, 2000);
     const sum = numQn.toString().split('');
-    const balance = getBalance(sum);
+    const balance = getBalance(sum, 0);
     const question = numQn;
     const answer = dataToString(balance);
     return cons(question, answer);

@@ -7,6 +7,13 @@ start:
 startbal:
 	npm run babel-node -- src/bin/brain-balance.js
 
+startprime:
+	npm run babel-node -- src/bin/brain-prime.js
+
+
+startprog:
+	npm run babel-node -- src/bin/brain-progression.js
+
 
 startgcd:
 	npm run babel-node -- src/bin/brain-gcd.js
