@@ -8,30 +8,34 @@ export const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-export const getBalance = (array, acc) => {
+export const getBalance = (array) => {
   const newArray = array;
-  if (acc === 3) {return 'end'};
-  console.log(newArray);
   let max = Math.max.apply(null, newArray);
   let min = Math.min.apply(null, newArray);
-  console.log(typeof(max), max, min);
-  const iMax = newArray.indexOf(`${max}`);
-  const iMin = newArray.indexOf(`${min}`);
-  console.log('index', iMax, iMin);
+  const iMax = newArray.indexOf(max);
+  const iMin = newArray.indexOf(min);
   if (max - min > 1) {
     min += 1;
     max -= 1;
     newArray[iMax] = max;
-  console.log('замена значения', newArray[iMax]);
     newArray[iMin] = min;
-    console.log('замена значения', newArray[iMin]);
-    console.log(newArray, 'преобразованный масив');
-    return getBalance(newArray, acc + 1, 'цикл');
+    return getBalance(newArray);
   }
   if (max - min === 1 || max === min) {
-    return console.log(newArray.sort(), 'сортировка');
+    return newArray.sort();
   }
   return newArray;
+};
+
+export const dataToNumber = (aRRay) => {
+  const iter = (mass, acc) => {
+    if (acc === mass.length) {
+      return mass;
+    }
+    mass[acc] = Number(mass[acc]);
+    return iter(aRRay, acc + 1);
+  };
+  return iter(aRRay, 0);
 };
 
 export const dataToString = (array) => {
@@ -75,10 +79,9 @@ export const prime = (number) => {
     }
     if (number % acc !== 0) {
       return del(number, acc + 1);
-    }
-    //return der(number, acc +1);
+    } return null;
   };
   return del(number, 2);
 };
 
-export default { getNumber, dataToString, getBalance, progression, prime };
+export default { getNumber, dataToString, getBalance, progression, prime, dataToNumber };

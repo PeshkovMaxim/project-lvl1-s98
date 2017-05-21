@@ -1,13 +1,14 @@
 import { cons } from 'hexlet-pairs';
-import { getNumber, getBalance, dataToString } from '../functions/mathFunctions';
+import { getNumber, getBalance, dataToString, dataToNumber } from '../functions/mathFunctions';
 import startAnyGame from '../functions/main';
 
 const startBalanceGame = () => {
   const startWelcome = 'Balance the given number.\n';
   const generator = () => {
     const numQn = getNumber(100, 2000);
-    const sum = numQn.toString().split('');
-    const balance = getBalance(sum, 0);
+    const numToString = numQn.toString().split('');
+    const arrayNunber = dataToNumber(numToString);
+    const balance = getBalance(arrayNunber);
     const question = numQn;
     const answer = dataToString(balance);
     return cons(question, answer);
