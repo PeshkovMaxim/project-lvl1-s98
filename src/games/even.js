@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { getNumber } from '../functions/mathFunctions';
-import startAnyGame from '../functions/main';
+import { getNumber } from '../utils';
+import startAnyGame from '..';
 
 const startEvenGames = () => {
   const startWelcome = 'Answer "yes" if number even otherwise answer "no".\n';

@@ -1,4 +1,4 @@
 #!/usr/bin/env nodejs
-import startPrimeGame from '../games/primeGame';
+import startPrimeGame from '../games/prime';
 
 startPrimeGame();

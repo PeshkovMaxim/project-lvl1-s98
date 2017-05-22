@@ -2,7 +2,7 @@ install:
 	 npm install
 
 start:
-	npm run babel-node -- src/bin/baranin-games.js
+	npm run babel-node -- src/bin/brain-games.js
 
 startbal:
 	npm run babel-node -- src/bin/brain-balance.js

@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { getNumber } from '../functions/mathFunctions';
-import startAnyGame from '../functions/main';
+import { getNumber } from '../utils';
+import startAnyGame from '..';
 
 
 const startCalcGame = () => {

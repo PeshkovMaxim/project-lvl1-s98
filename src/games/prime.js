@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { getNumber, prime } from '../functions/mathFunctions';
-import startAnyGame from '../functions/main';
+import { getNumber, prime } from '../utils';
+import startAnyGame from '..';
 
 const startPrimeGame = () => {
   const startWelcome = 'Answer "yes" if number prime otherwise answer "no".\n';

@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { getNumber, getBalance, dataToString, dataToNumber } from '../functions/mathFunctions';
-import startAnyGame from '../functions/main';
+import { getNumber, getBalance, dataToString, dataToNumber } from '../utils';
+import startAnyGame from '..';
 
 const startBalanceGame = () => {
   const startWelcome = 'Balance the given number.\n';

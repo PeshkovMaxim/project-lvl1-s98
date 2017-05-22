@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { getNumber, progression } from '../functions/mathFunctions';
-import startAnyGame from '../functions/main';
+import { getNumber, progression } from '../utils';
+import startAnyGame from '..';
 
 const startProgressionGame = () => {
   const startWelcome = 'What number is missing in this progression?\n';

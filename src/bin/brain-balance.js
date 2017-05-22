@@ -1,4 +1,4 @@
 #!/usr/bin/env nodejs
-import startBalanceGame from '../games/balanceGame';
+import startBalanceGame from '../games/balance';
 
 startBalanceGame();
