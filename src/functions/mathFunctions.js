@@ -28,11 +28,12 @@ export const getBalance = (array) => {
 };
 
 export const dataToNumber = (aRRay) => {
+  const newArray = aRRay;
   const iter = (mass, acc) => {
     if (acc === mass.length) {
       return mass;
     }
-    mass[acc] = Number(mass[acc]);
+    newArray[acc] = Number(mass[acc]);
     return iter(aRRay, acc + 1);
   };
   return iter(aRRay, 0);
@@ -67,18 +68,18 @@ export const progression = (a, b, c) => {
 };
 
 export const prime = (number) => {
-  const del = (number, acc) => {
-    if (acc === number) {
+  const del = (num, acc) => {
+    if (acc === num) {
       return 'yes';
     }
-    if (number === 2) {
+    if (num === 2) {
       return 'yes';
     }
-    if (number % acc === 0) {
+    if (num % acc === 0) {
       return 'no';
     }
-    if (number % acc !== 0) {
-      return del(number, acc + 1);
+    if (num % acc !== 0) {
+      return del(num, acc + 1);
     } return null;
   };
   return del(number, 2);
