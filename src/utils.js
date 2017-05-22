@@ -78,9 +78,7 @@ export const prime = (number) => {
     if (num % acc === 0) {
       return 'no';
     }
-    if (num % acc !== 0) {
-      return del(num, acc + 1);
-    } return null;
+    return del(num, acc + 1);
   };
   return del(number, 2);
 };
